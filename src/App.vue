@@ -1,9 +1,17 @@
 <template lang="html">
-  <div class="">
-    <film-list :films="films"></film-list>
-    <film-details v-if="selectedFilm" :film="selectedFilm"></film-details>
-    <character-list :characters="characters"></character-list>
-    <character-details v-if="selectedCharacter" :character="selectedCharacter"></character-details>
+  <div class="container">
+    <div class="film-list">
+      <film-list :films="films"></film-list>
+    </div>
+    <div class="film-details">
+      <film-details v-if="selectedFilm" :film="selectedFilm"></film-details>
+    </div>
+    <div class="character-list">
+      <character-list :characters="characters"></character-list>
+    </div>
+    <div class="character-details">
+      <character-details v-if="selectedCharacter" :character="selectedCharacter"></character-details>
+    </div>
   </div>
 </template>
 
@@ -51,4 +59,31 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.container {
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.film-list {
+  border-style: solid;
+  width: 24%;
+}
+
+.film-details {
+  border-style: solid;
+  width: 24%;
+}
+
+.character-list {
+  border-style: solid;
+  width: 24%;
+}
+
+.character-details {
+  border-style: solid;
+  width: 24%;
+}
+
 </style>
