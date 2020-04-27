@@ -4,6 +4,8 @@
 
 <script>
 export default {
+  name: 'character-list'
+  props: ['characters']
 }
 </script>
 

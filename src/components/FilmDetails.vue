@@ -12,7 +12,27 @@
 <script>
 export default {
   name: 'film-details',
-  props: ['film']
+  props: ['film'],
+  data() {
+    return {
+      characters: [],
+    }
+  },
+  mounted() {
+    this.getCharacters()
+  },
+  methods: {
+    getCharacters() {
+      const characterPromises = this.film.characters.map((character) => {
+        return fetch(character).then(res => res.json());
+      });
+
+      Promise.all(characterPromises)
+      .then((data) => {
+        this.characters = data;
+      });
+    }
+  }
 }
 </script>
 

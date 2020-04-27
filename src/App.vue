@@ -12,20 +12,20 @@ import {eventBus} from './main.js';
 
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
       films: [],
       selectedFilm: null
     }
   },
-  mounted () {
+  mounted() {
     fetch('https://swapi.dev/api/films/')
     .then(res => res.json())
     .then(films => this.films = films.results)
 
     eventBus.$on('selected-film', (film) => {
       this.selectedFilm = film;
-    })
+    });
   },
   components: {
     'film-list': FilmList,
