@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div>
     <p>{{film.title}}</p>
     <p>Episode: {{film.episode_id}}</p>
     <p>Director: {{film.director}}</p>
