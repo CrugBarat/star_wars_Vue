@@ -1,5 +1,8 @@
 <template lang="html">
-  <p>{{films}}</p>
+  <div>
+    <p>Film list:</p>
+    <p v-for="film in films">{{film.title}}</p>
+  </div>
 </template>
 
 <script>
