@@ -3,6 +3,7 @@
     <film-list :films="films"></film-list>
     <film-details v-if="selectedFilm" :film="selectedFilm"></film-details>
     <character-list :characters="characters"></character-list>
+    <character-details v-if="selectedCharacter" :character="selectedCharacter"></character-details>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FilmList from './components/FilmList.vue';
 import FilmDetails from '@/components/FilmDetails.vue';
 import CharacterList from '@/components/CharacterList.vue';
+import CharacterDetails from '@/components/CharacterDetails.vue';
 import {eventBus} from './main.js';
 
 export default {
@@ -18,7 +20,8 @@ export default {
     return {
       films: [],
       selectedFilm: null,
-      characters: null
+      characters: null,
+      selectedCharacter: null
     }
   },
   mounted() {
@@ -33,16 +36,16 @@ export default {
     eventBus.$on('characters-selected', (characters) => {
       this.characters = characters;
     });
+
+    eventBus.$on('selected-character', (character) => {
+      this.selectedCharacter = character;
+    });
   },
   components: {
     'film-list': FilmList,
     'film-details': FilmDetails,
     'character-list': CharacterList,
-  },
-  watch: {
-    film(){
-      this.getEpisodes()
-    }
+    'character-details': CharacterDetails,
   },
 }
 </script>
