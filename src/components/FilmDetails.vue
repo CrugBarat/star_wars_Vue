@@ -5,11 +5,13 @@
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date}}</p>
-    <p>Characters:</p>
+    <p v-on:click="handleClick">Characters:</p>
   </div>
 </template>
 
 <script>
+import {eventBus} from '../main.js';
+
 export default {
   name: 'film-details',
   props: ['film'],
@@ -31,6 +33,15 @@ export default {
       .then((data) => {
         this.characters = data;
       });
+    },
+
+    handleClick() {
+      eventBus.$emit('characters-selected', this.characters);
+    }
+  },
+  watch: {
+    film(){
+      this.getCharacters()
     }
   }
 }
