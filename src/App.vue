@@ -4,7 +4,18 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      films: []
+    }
+  },
+  mounted(){
+    fetch('https://swapi.dev/api/films/')
+    .then(res => res.json())
+    .then(films => this.films = films.results)
+
+  }
 }
 </script>
 
