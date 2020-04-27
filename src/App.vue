@@ -39,6 +39,8 @@ export default {
 
     eventBus.$on('selected-film', (film) => {
       this.selectedFilm = film;
+      this.characters = null;
+      this.selectedCharacter = null;
     });
 
     eventBus.$on('characters-selected', (characters) => {

@@ -2,7 +2,7 @@
   <div>
     <p>{{character.name}}</p>
     <p>Gender: {{character.gender}}</p>
-    <p>Height: {{character.height}}</p>
+    <p>Height: {{character.height | formatHeight}}m</p>
     <p>Hair Colour: {{character.hair_color}}</p>
     <p>Skin Colour: {{character.skin_color}}</p>
     <p>Eye Colour: {{character.eye_color}}</p>
@@ -16,6 +16,11 @@
 export default {
   name: 'character-details',
   props: ['character'],
+  filters: {
+    formatHeight(value) {
+      return value / 100
+    }
+  }
 }
 </script>
 
