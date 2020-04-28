@@ -2,7 +2,7 @@
   <div>
     <p>{{film.title}}</p>
     <p>Episode: {{film.episode_id}}</p>
-    <p>Opening Crawl*</p>
+    <router-link :to="{name: 'opening_crawl', params: {film}}">Opening Crawl</router-link>
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date | formatDate}}</p>

@@ -5,6 +5,7 @@ import Character from '@/views/Character.vue';
 import Homeworld from '@/views/Homeworld.vue';
 import Vehicle from '@/views/Vehicle.vue';
 import Starship from '@/views/Starship.vue';
+import OpeningCrawl from '@/views/OpeningCrawl.vue';
 
 Vue.use(Router);
 
@@ -38,6 +39,12 @@ const router = new Router({
       path: "/starship",
       name: "starship",
       component: Starship,
+      props: true
+    },
+    {
+      path: "/opening_crawl",
+      name: "opening_crawl",
+      component: OpeningCrawl,
       props: true
     }
   ]
