@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="Homeworld">
+  <div class="homeworld">
     <p>{{homeworld.name}}</p>
     <p>Rotation Period: {{homeworld.rotation_period}}</p>
     <p>Orbital Period: {{homeworld.orbital_period}}</p>

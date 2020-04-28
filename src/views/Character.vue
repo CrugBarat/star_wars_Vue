@@ -12,7 +12,7 @@
     </div>
     <div class="starships">
       <p>Vehicles:</p>
-      <p v-for="vehicle in vehicles">{{vehicle.name}}</p>
+      <router-link :to="{name: 'vehicle', params: {vehicle}}" v-for="vehicle in vehicles"> <br>{{vehicle.name}}</router-link>
       <p>Starships:</p>
       <p v-for="starship in starships">{{starship.name}}</p>
     </div>
