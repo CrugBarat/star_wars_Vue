@@ -4,13 +4,14 @@
     <p>Episode: {{film.episode_id}}</p>
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
-    <p>Release Date: {{film.release_date}}</p>
+    <p>Release Date: {{film.release_date | formatDate}}</p>
     <p v-on:click="handleClick">Characters:</p>
   </div>
 </template>
 
 <script>
 import {eventBus} from '../main.js';
+import moment from 'moment';
 
 export default {
   name: 'film-details',
@@ -42,6 +43,11 @@ export default {
   watch: {
     film(){
       this.getCharacters()
+    }
+  },
+  filters: {
+    formatDate(value) {
+      return moment(value, 'YYYY-MM-DD').format('DD MMM YYYY');
     }
   }
 }

@@ -2,6 +2,7 @@
   <div>
     <p>{{character.name}}</p>
     <p>Gender: {{character.gender}}</p>
+    <p>Birth Year: {{character.birth_year}}</p>
     <p>Height: {{character.height | formatHeight}}m</p>
     <p>Hair Colour: {{character.hair_color}}</p>
     <p>Skin Colour: {{character.skin_color}}</p>
