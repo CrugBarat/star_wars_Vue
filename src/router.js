@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue';
 import Character from '@/views/Character.vue';
 import Homeworld from '@/views/Homeworld.vue';
 import Vehicle from '@/views/Vehicle.vue';
+import Starship from '@/views/Starship.vue';
 
 Vue.use(Router);
 
@@ -31,6 +32,12 @@ const router = new Router({
       path: "/vehicle",
       name: "vehicle",
       component: Vehicle,
+      props: true
+    },
+    {
+      path: "/starship",
+      name: "starship",
+      component: Starship,
       props: true
     }
   ]

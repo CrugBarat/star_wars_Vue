@@ -14,7 +14,7 @@
       <p>Vehicles:</p>
       <router-link :to="{name: 'vehicle', params: {vehicle}}" v-for="vehicle in vehicles"> <br>{{vehicle.name}}</router-link>
       <p>Starships:</p>
-      <p v-for="starship in starships">{{starship.name}}</p>
+      <router-link :to="{name: 'starship', params: {starship}}" v-for="starship in starships"> <br>{{starship.name}}</router-link>
     </div>
   </div>
 </template>
