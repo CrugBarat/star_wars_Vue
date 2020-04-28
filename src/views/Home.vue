@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="container">
-    <div class="film-list">
-      <film-list :films="films"></film-list>
-    </div>
     <div class="film-details">
       <film-details v-if="selectedFilm" :film="selectedFilm"></film-details>
+    </div>
+    <div class="film-list">
+      <film-list :films="films"></film-list>
     </div>
     <div class="character-list">
       <character-list :characters="characters"></character-list>

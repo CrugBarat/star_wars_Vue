@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <router-link :to="{name: 'character', params:{character}}">{{character.name}}</router-link>
+    <router-link :to="{name: 'character', params: {character}}">{{character.name}}</router-link>
   </div>
 </template>
 
