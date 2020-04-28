@@ -10,7 +10,7 @@
 
     <div class="board">
       <div class="content">
-        <p class="episode">Episode {{film.episode_id}}</p>
+        <p class="episode">Episode {{toRomanNumerals(this.film.episode_id)}}</p>
         <p class="title">{{film.title.toUpperCase()}}</p>
         <br>
         <p>{{film.opening_crawl}}</p>
@@ -29,9 +29,25 @@
     name: 'opening-crawl',
     props: ['film'],
     methods: {
-    audioDelay(){
-      let audioPlayer = event.target;
-      setTimeout(function() {audioPlayer.play()}, 8000)
+      audioDelay(){
+        let audioPlayer = event.target;
+        setTimeout(function() {audioPlayer.play()}, 8000)
+      },
+
+      toRomanNumerals(episode){
+        if (episode === 1) {
+          return 'I'
+        } else if (episode === 2) {
+          return 'II'
+        } else if (episode === 3) {
+          return 'III'
+        } else if (episode === 4) {
+          return 'IV'
+        } else if (episode === 5) {
+          return 'V'
+        } else {
+          return 'VI'
+        }
       }
     }
   }
@@ -52,11 +68,11 @@
       opacity: 0;
       color: #4bd5ee;
       font-weight: 300;
-      font-size: 300%;
+      font-size: 200%;
       font-family: 'News Cycle', sans-serif;
     }
 
-    /* animationcode - loop through phrase opacity */
+    /* animation code - loop through phrase opacity */
     @keyframes intro {
       0% {
           opacity: 0;
