@@ -17,6 +17,10 @@
       </div>
     </div>
 
+    <audio @loadeddata="audioDelay" preload="auto">
+      <source src="../assets/song.mp3" type="audio/mpeg">
+    </audio>
+
   </div>
 
 </template>
@@ -24,7 +28,13 @@
 <script>
   export default {
     name: 'opening-crawl',
-    props: ['film']
+    props: ['film'],
+    methods: {
+    audioDelay(){
+      let audioPlayer = event.target;
+      setTimeout(function() {audioPlayer.play()}, 8000)
+      }
+    }
   }
 </script>
 
@@ -35,7 +45,7 @@
       /* position intro phrase */
       position: absolute;
       margin-top: 35vh;
-      margin-left: 25vw;
+      margin-left: 27vw;
       z-index: 1;
       /* phrase animation duration*/
       animation: intro 6s ease-out 1s;
