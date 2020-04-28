@@ -6,15 +6,37 @@
           <p>STAR WARS</p>
         </div>
       </router-link>
+    </div>
     <router-view></router-view>
   </div>
-</div>
 </template>
 
 <script>
+
     export default {
-      name: 'app'
+      name: 'app',
+      mounted () {
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+          let star = document.createElement("div");
+          star.className = "star";
+          let xy = getRandomPosition();
+          star.style.top = xy[0] + 'px';
+          star.style.left = xy[1] + 'px';
+          document.body.append(star);
+        }
+
+        function getRandomPosition() {
+          let y = window.innerWidth;
+          let x = window.innerHeight;
+          let randomX = Math.floor(Math.random()*x);
+          let randomY = Math.floor(Math.random()*y);
+          return [randomX,randomY];
+        }
+      }
     }
+
 </script>
 
 
@@ -40,20 +62,29 @@
 </style>
 
 <style>
-  body {
-    background-color: black;
-    font-family: 'Franklin';
-    color: #f9D71C;
-    cursor: url('./assets/lightsaber.png'), auto;
-  }
 
-  @font-face {
-    font-family: 'Jedi';
-    src: url('./assets/fonts/Starjedi.ttf');
-  }
+    body {
+      background-color: #000;
+      font-family: 'Franklin';
+      cursor: url('./assets/lightsaber.png'), auto;
+      overflow: hidden;
+    }
 
-  @font-face {
-    font-family: 'Franklin';
-    src: url('./assets/fonts/Franklin.ttf');
-  }
+    .star {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background-color: white;
+    }
+
+    @font-face {
+      font-family: 'Jedi';
+      src: url('./assets/fonts/Starjedi.ttf');
+    }
+
+    @font-face {
+      font-family: 'Franklin';
+      src: url('./assets/fonts/Franklin.ttf');
+    }
+
 </style>
