@@ -67,7 +67,6 @@
       background-color: #000;
       font-family: 'Franklin';
       cursor: url('./assets/lightsaber.png'), auto;
-      overflow: hidden;
       color: #EEDB00;
     }
 
