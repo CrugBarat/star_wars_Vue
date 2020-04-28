@@ -1,6 +1,15 @@
 <template lang="html">
   <div class="container">
     <div class="Homeworld">
+      <p>{{homeworld.name}}</p>
+      <p>Rotation Period: {{homeworld.rotation_period}}</p>
+      <p>Orbital Period: {{homeworld.orbital_period}}</p>
+      <p>Diameter: {{homeworld.diameter}}m</p>
+      <p>Climate: {{homeworld.climate}}</p>
+      <p>Gravity: {{homeworld.gravity}}</p>
+      <p>Terrain: {{homeworld.terrain}}</p>
+      <p>Surface Water: {{homeworld.surface_water}}</p>
+      <p>Population: {{homeworld.population}}</p>
     </div>
     <div class="character">
       <p>{{character.name}}</p>
@@ -10,10 +19,12 @@
       <p>Hair Colour: {{character.hair_color}}</p>
       <p>Skin Colour: {{character.skin_color}}</p>
       <p>Eye Colour: {{character.eye_color}}</p>
-      <p>Homeworld</p>
-      <p>Vehicles</p>
     </div>
     <div class="starships">
+      <p>Vehicles:</p>
+      <p v-for="vehicle in vehicles">{{vehicle.name}}</p>
+      <p>Starships:</p>
+      <p v-for="starship in starships">{{starship.name}}</p>
     </div>
   </div>
 </template>
