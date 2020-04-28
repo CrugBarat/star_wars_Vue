@@ -74,23 +74,15 @@ export default {
 
 <style lang="css" scoped>
 .container {
-  border-style: solid;
   display: flex;
   flex-direction: row;
 }
 
 .character {
-  border-style: solid;
-  width: 32%;
-}
-
-.Homeworld {
-  border-style: solid;
-  width: 32%;
+  width: 45%;
 }
 
 .vehicles {
-  border-style: solid;
-  width: 32%;
+  width: 45%;
 }
 </style>

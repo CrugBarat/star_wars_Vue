@@ -53,23 +53,19 @@ export default {
 <style lang="css" scoped>
 
 .container {
-  border-style: solid;
   display: flex;
   flex-direction: row;
 }
 
 .film-list {
-  border-style: solid;
   width: 32%;
 }
 
 .film-details {
-  border-style: solid;
   width: 32%;
 }
 
 .character-list {
-  border-style: solid;
   width: 32%;
 }
 

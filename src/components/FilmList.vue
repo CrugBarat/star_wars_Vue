@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
-    <p>Film list:</p>
-      <list-item v-for="film in films" :film="film"></list-item>
+    <list-item v-for="film in films" :film="film"></list-item>
   </div>
 </template>
 

@@ -5,7 +5,7 @@
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date | formatDate}}</p>
-    <p v-on:click="handleClick">Characters:</p>
+    <p class="characters" v-on:click="handleClick">Characters</p>
   </div>
 </template>
 
@@ -54,4 +54,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.characters {
+  text-decoration: underline;
+  color: blue;
+}
+.characters:hover {
+  cursor: pointer;
+}
 </style>

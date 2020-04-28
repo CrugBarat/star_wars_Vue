@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <p v-on:click="handleClick">{{film.title}}</p>
+    <p class="film" v-on:click="handleClick">{{film.title}}</p>
   </div>
 </template>
 
@@ -19,4 +19,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.film:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
 </style>
