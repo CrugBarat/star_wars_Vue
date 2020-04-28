@@ -20,7 +20,6 @@
     <audio @loadeddata="audioDelay" preload="auto">
       <source src="../assets/song.mp3" type="audio/mpeg">
     </audio>
-
   </div>
 
 </template>
@@ -86,83 +85,83 @@
       opacity: 0;
     }
 
-  .logo svg {
-      width: inherit;
-  }
-
-  /* animation code - logo scale and fade */
-  @keyframes logo {
-    0% {
-        transform: scale(3.00);
-        opacity: 1;
+    .logo svg {
+        width: inherit;
     }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.1);
-    }
-  }
 
-  p {
-  color: #EEDB00;
-  }
-
-
-  .board {
-    font-family: 'News';
-    /* set position of crawl on z axis */
-    transform: perspective(350px) rotateX(25deg);
-    /* set position on xy */
-    transform-origin: 50% 100%;
-    /* position crawl */
-    position: absolute;
-    height: 300%;
-    width: 100vw;
-    bottom: 0;
-    left: 48%;
-    margin-left: -49vw;
-    overflow: hidden;
-    font-size: 475%;
-    text-align: justify;
-  }
-
-  .board:after {
-    position: absolute;
-    content: ' ';
-    bottom: 60%;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-
-
-  .content {
-    /* animation duration and position */
-    animation: scroll 80s linear 16s;
-    position: absolute;
-    top: 100%;
-  }
-
-  .title {
-    font-family: 'Gothic';
-    font-size: 15vh;
-    margin-bottom: 0;
-  }
-
-  .episode, .title {
-    text-align: center;
-  }
-
-  /* animation code  */
-  @keyframes scroll {
+    /* animation code - logo scale and fade */
+    @keyframes logo {
       0% {
-          top: 100%;
+          transform: scale(3.00);
+          opacity: 1;
+      }
+      50% {
+          opacity: 1;
       }
       100% {
-          top: -170%;
+          opacity: 0;
+          transform: scale(0.1);
       }
-  }
+    }
+
+    p {
+    color: #EEDB00;
+    }
+
+
+    .board {
+      font-family: 'News';
+      /* set position of crawl on z axis */
+      transform: perspective(350px) rotateX(25deg);
+      /* set position on xy */
+      transform-origin: 50% 100%;
+      /* position crawl */
+      position: absolute;
+      height: 300%;
+      width: 100vw;
+      bottom: 0;
+      left: 48%;
+      margin-left: -49vw;
+      overflow: hidden;
+      font-size: 475%;
+      text-align: justify;
+    }
+
+    .board:after {
+      position: absolute;
+      content: ' ';
+      bottom: 60%;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+
+    .content {
+      /* animation duration and position */
+      animation: scroll 80s linear 16s;
+      position: absolute;
+      top: 100%;
+    }
+
+    .title {
+      font-family: 'Gothic';
+      font-size: 15vh;
+      margin-bottom: 0;
+    }
+
+    .episode, .title {
+      text-align: center;
+    }
+
+    /* animation code  */
+    @keyframes scroll {
+        0% {
+            top: 100%;
+        }
+        100% {
+            top: -170%;
+        }
+    }
 
 </style>
