@@ -2,9 +2,7 @@
   <div>
     <div v-if="['opening_crawl'].indexOf($route.name)">
       <router-link class="link" :to="{name: 'home'}">
-        <div class="title">
-          <p>STAR WARS</p>
-        </div>
+        <img class="title" src="./assets/logo.svg">
       </router-link>
     </div>
     <router-view></router-view>
@@ -41,24 +39,18 @@
 
 
 <style lang="css" scoped>
+
     .link {
       text-decoration: none;
       cursor: url('./assets/lightsaber.png'), auto;
+      display: block;
+      text-align: center;
     }
 
     .title {
-      font-family: 'Jedi';
-      font-size: 10vw;
-      text-align: center;
-      color: black;
-      opacity: 80%;
-      text-shadow: -1px -1px 0 #EEDB00, 1px -1px 0 #EEDB00, -1px 1px 0 #EEDB00, 1px 1px 0 #EEDB00;
+      height: 250px;
     }
 
-    p {
-      padding: 0;
-      margin: 0;
-    }
 </style>
 
 <style>
@@ -68,6 +60,7 @@
       font-family: 'Gothic';
       cursor: url('./assets/lightsaber.png'), auto;
       color: #EEDB00;
+      font-size: 25px;
     }
 
     .star {
