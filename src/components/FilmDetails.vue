@@ -2,12 +2,12 @@
   <div>
     <p>{{film.title}}</p>
     <p>Episode: {{film.episode_id}}</p>
-    <router-link :to="{name: 'opening_crawl', params: {film}}">Opening Crawl</router-link>
+    <router-link class="link" :to="{name: 'opening_crawl', params: {film}}">Opening Crawl</router-link>
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date | formatDate}}</p>
-    <p class="characters" v-on:click="handleClick">Characters</p>
-    <router-link :to="{name: 'more_details', params: {planets, vehicles, starships, species}}">More Details</router-link>
+    <p class="link" v-on:click="handleClick">Characters</p>
+    <router-link class="link" :to="{name: 'more_details', params: {planets, vehicles, starships, species}}">More Details</router-link>
   </div>
 </template>
 
@@ -108,11 +108,14 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.characters {
-  text-decoration: underline;
-  color: blue;
-}
+
 .characters:hover {
-  cursor: pointer;
+  cursor: url('../assets/lightsaber.png'), auto;
+}
+
+.link {
+  cursor: url('../assets/lightsaber.png'), auto;
+  text-decoration: none;
+  color: #f9D71C;
 }
 </style>

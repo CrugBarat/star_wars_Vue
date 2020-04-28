@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <router-link :to="{name: 'character', params: {character}}">{{character.name}}</router-link>
+    <router-link class="link" :to="{name: 'character', params: {character}}">{{character.name}}</router-link>
   </div>
 </template>
 
@@ -14,4 +14,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.link {
+  cursor: url('../assets/lightsaber.png'), auto;
+  text-decoration: none;
+  color: #f9D71C;
+}
 </style>

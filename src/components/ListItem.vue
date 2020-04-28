@@ -20,7 +20,7 @@ export default {
 
 <style lang="css" scoped>
 .film:hover {
-  cursor: pointer;
+  cursor: url('../assets/lightsaber.png'), auto;
   text-decoration: underline;
   color: blue;
 }
