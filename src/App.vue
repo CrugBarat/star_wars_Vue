@@ -65,7 +65,7 @@
 
     body {
       background-color: #000;
-      font-family: 'Franklin';
+      font-family: 'Gothic';
       cursor: url('./assets/lightsaber.png'), auto;
       color: #EEDB00;
     }
@@ -83,8 +83,13 @@
     }
 
     @font-face {
-      font-family: 'Franklin';
-      src: url('./assets/fonts/Franklin.ttf');
+      font-family: 'Gothic';
+      src: url('./assets/fonts/gothic.otf');
+    }
+
+    @font-face {
+      font-family: 'News';
+      src: url('./assets/fonts/news.otf');
     }
 
 </style>

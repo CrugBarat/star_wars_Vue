@@ -8,16 +8,26 @@
       <img src="../assets/logo.svg">
     </section>
 
+    <div class="board">
+      <div class="content">
+        <p class="episode">Episode {{film.episode_id}}</p>
+        <p class="title">{{film.title.toUpperCase()}}</p>
+        <br>
+        <p>{{film.opening_crawl}}</p>
+      </div>
+    </div>
+
   </div>
 
 </template>
 
 <script>
-export default {
-  name: 'opening-crawl',
-  props: ['film']
-}
+  export default {
+    name: 'opening-crawl',
+    props: ['film']
+  }
 </script>
+
 
 <style lang="css" scoped>
 
@@ -29,11 +39,12 @@ export default {
       z-index: 1;
       /* phrase animation duration*/
       animation: intro 6s ease-out 1s;
-      color: rgb(75, 213, 238);
-      font-weight: 400;
-      font-size: 300%;
       /* hide phrase */
       opacity: 0;
+      color: #4bd5ee;
+      font-weight: 300;
+      font-size: 300%;
+      font-family: 'News Cycle', sans-serif;
     }
 
     /* animationcode - loop through phrase opacity */
@@ -55,7 +66,7 @@ export default {
     .logo {
       /* position the logo */
       position: absolute;
-      top: 20vh;
+      top: 14.5vh;
       left: 25vw;
       z-index: 1;
       margin: auto;
@@ -69,7 +80,7 @@ export default {
       width: inherit;
   }
 
-  /* animation code - scale and fade */
+  /* animation code - logo scale and fade */
   @keyframes logo {
     0% {
         transform: scale(3.00);
@@ -82,6 +93,66 @@ export default {
         opacity: 0;
         transform: scale(0.1);
     }
+  }
+
+  p {
+  color: #EEDB00;
+  }
+
+
+  .board {
+    font-family: 'News';
+    /* set position of crawl on z axis */
+    transform: perspective(350px) rotateX(25deg);
+    /* set position on xy */
+    transform-origin: 50% 100%;
+    /* position crawl */
+    position: absolute;
+    height: 300%;
+    width: 100vw;
+    bottom: 0;
+    left: 48%;
+    margin-left: -49vw;
+    overflow: hidden;
+    font-size: 475%;
+    text-align: justify;
+  }
+
+  .board:after {
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+
+  .content {
+    /* animation duration and position */
+    animation: scroll 80s linear 16s;
+    position: absolute;
+    top: 100%;
+  }
+
+  .title {
+    font-family: 'Gothic';
+    font-size: 15vh;
+    margin-bottom: 0;
+  }
+
+  .episode, .title {
+    text-align: center;
+  }
+
+  /* animation code  */
+  @keyframes scroll {
+      0% {
+          top: 100%;
+      }
+      100% {
+          top: -170%;
+      }
   }
 
 </style>
