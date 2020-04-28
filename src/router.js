@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/views/Home.vue';
 import Character from '@/views/Character.vue';
-import Home from '@/views/Home.vue'
+import Homeworld from '@/views/Homeworld.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
   mode: 'history',
@@ -17,6 +18,12 @@ const router = new Router({
       path: "/character",
       name: "character",
       component: Character,
+      props: true
+    },
+    {
+      path: "/homeworld",
+      name: "homeworld",
+      component: Homeworld,
       props: true
     }
   ]
