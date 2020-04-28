@@ -52,7 +52,7 @@
       text-align: center;
       color: black;
       opacity: 80%;
-      text-shadow: -1px -1px 0 #f9D71C, 1px -1px 0 #f9D71C, -1px 1px 0 #f9D71C, 1px 1px 0 #f9D71C;
+      text-shadow: -1px -1px 0 #EEDB00, 1px -1px 0 #EEDB00, -1px 1px 0 #EEDB00, 1px 1px 0 #EEDB00;
     }
 
     p {
@@ -68,6 +68,7 @@
       font-family: 'Franklin';
       cursor: url('./assets/lightsaber.png'), auto;
       overflow: hidden;
+      color: #EEDB00;
     }
 
     .star {
