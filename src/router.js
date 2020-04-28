@@ -6,6 +6,7 @@ import Homeworld from '@/views/Homeworld.vue';
 import Vehicle from '@/views/Vehicle.vue';
 import Starship from '@/views/Starship.vue';
 import OpeningCrawl from '@/views/OpeningCrawl.vue';
+import MoreFilmDetails from '@/views/MoreFilmDetails.vue';
 
 Vue.use(Router);
 
@@ -45,6 +46,12 @@ const router = new Router({
       path: "/opening_crawl",
       name: "opening_crawl",
       component: OpeningCrawl,
+      props: true
+    },
+    {
+      path: "/more_details",
+      name: "more_details",
+      component: MoreFilmDetails,
       props: true
     }
   ]

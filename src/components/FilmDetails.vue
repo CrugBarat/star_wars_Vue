@@ -7,10 +7,7 @@
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date | formatDate}}</p>
     <p class="characters" v-on:click="handleClick">Characters</p>
-    <p>Planets*</p>
-    <p>Vehicles*</p>
-    <p>Starships*</p>
-    <p>Species*</p>
+    <router-link :to="{name: 'more_details', params: {planets, vehicles, starships, species}}">More Details</router-link>
   </div>
 </template>
 
@@ -24,10 +21,18 @@ export default {
   data() {
     return {
       characters: [],
+      planets: [],
+      vehicles: [],
+      starships: [],
+      species: []
     }
   },
   mounted() {
-    this.getCharacters()
+    this.getCharacters();
+    this.getPlanets();
+    this.getVehicles();
+    this.getStarships();
+    this.getSpecies();
   },
   methods: {
     getCharacters() {
@@ -38,6 +43,50 @@ export default {
       Promise.all(characterPromises)
       .then((data) => {
         this.characters = data;
+      });
+    },
+
+    getPlanets() {
+      const planetsPromises = this.film.planets.map((planets) => {
+        return fetch(planets).then(res => res.json());
+      });
+
+      Promise.all(planetsPromises)
+      .then((data) => {
+        this.planets = data;
+      });
+    },
+
+    getVehicles() {
+      const vehiclesPromises = this.film.vehicles.map((vehicles) => {
+        return fetch(vehicles).then(res => res.json());
+      });
+
+      Promise.all(vehiclesPromises)
+      .then((data) => {
+        this.vehicles = data;
+      });
+    },
+
+    getStarships() {
+      const starshipsPromises = this.film.starships.map((starships) => {
+        return fetch(starships).then(res => res.json());
+      });
+
+      Promise.all(starshipsPromises)
+      .then((data) => {
+        this.starships = data;
+      });
+    },
+
+    getSpecies() {
+      const speciesPromises = this.film.species.map((species) => {
+        return fetch(species).then(res => res.json());
+      });
+
+      Promise.all(speciesPromises)
+      .then((data) => {
+        this.species = data;
       });
     },
 

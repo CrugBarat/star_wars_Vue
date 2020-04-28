@@ -8,7 +8,6 @@
       <p>Hair Colour: {{character.hair_color}}</p>
       <p>Skin Colour: {{character.skin_color}}</p>
       <p>Eye Colour: {{character.eye_color}}</p>
-      <p>Films*</p>
       <router-link :to="{name: 'homeworld', params: {homeworld}}">Homeworld: {{homeworld.name}}</router-link>
     </div>
     <div class="starships">
@@ -16,6 +15,10 @@
       <router-link :to="{name: 'vehicle', params: {vehicle}}" v-for="vehicle in vehicles"> <br>{{vehicle.name}}</router-link>
       <p>Starships:</p>
       <router-link :to="{name: 'starship', params: {starship}}" v-for="starship in starships"> <br>{{starship.name}}</router-link>
+    </div>
+    <div class="films">
+      <p>Films</p>
+      <p v-for="film in films">{{film.title}}</p>
     </div>
   </div>
 </template>
@@ -29,6 +32,7 @@ export default {
       homeworld: [],
       vehicles: [],
       starships: [],
+      films: []
     }
   },
   filters: {
@@ -40,6 +44,7 @@ export default {
     this.getHomeworld();
     this.getVehicles();
     this.getStarships();
+    this.getFilms();
   },
   methods: {
     getHomeworld() {
@@ -69,6 +74,17 @@ export default {
         this.starships = data;
       });
     },
+
+    getFilms() {
+      const filmsPromises = this.character.films.map((films) => {
+        return fetch(films).then(res => res.json());
+      });
+
+      Promise.all(filmsPromises)
+      .then((data) => {
+        this.films = data;
+      });
+    }
   }
 }
 </script>
@@ -80,10 +96,14 @@ export default {
 }
 
 .character {
-  width: 45%;
+  width: 32%;
 }
 
-.vehicles {
-  width: 45%;
+.starships{
+  width: 32%;
+}
+
+.films {
+  width: 32%;
 }
 </style>
