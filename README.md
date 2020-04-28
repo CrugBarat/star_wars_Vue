@@ -61,6 +61,8 @@ npm run serve
 
 # Acknowledgements
 
+Thanks to  C. Kade
+
 **APIs used**
 
 - [Star Wars API](https://swapi.dev/api/films/)
