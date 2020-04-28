@@ -2,10 +2,15 @@
   <div>
     <p>{{film.title}}</p>
     <p>Episode: {{film.episode_id}}</p>
+    <p>Opening Crawl*</p>
     <p>Director: {{film.director}}</p>
     <p>Producer(s): {{film.producer}}</p>
     <p>Release Date: {{film.release_date | formatDate}}</p>
     <p class="characters" v-on:click="handleClick">Characters</p>
+    <p>Planets*</p>
+    <p>Vehicles*</p>
+    <p>Starships*</p>
+    <p>Species*</p>
   </div>
 </template>
 

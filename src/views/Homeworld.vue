@@ -9,6 +9,8 @@
     <p>Terrain: {{homeworld.terrain}}</p>
     <p>Surface Water: {{homeworld.surface_water}}</p>
     <p>Population: {{homeworld.population}}</p>
+    <p>Residents*</p>
+    <p>Films*</p>
   </div>
 </template>
 

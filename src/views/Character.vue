@@ -8,6 +8,7 @@
       <p>Hair Colour: {{character.hair_color}}</p>
       <p>Skin Colour: {{character.skin_color}}</p>
       <p>Eye Colour: {{character.eye_color}}</p>
+      <p>Films*</p>
       <router-link :to="{name: 'homeworld', params: {homeworld}}">Homeworld: {{homeworld.name}}</router-link>
     </div>
     <div class="starships">

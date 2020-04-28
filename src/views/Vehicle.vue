@@ -9,6 +9,7 @@
     <p>Cargo Capacity: {{vehicle.cargo_capacity}}</p>
     <p>Vehicle Class: {{vehicle.vehicle_class}}</p>
     <p>Pilots:</p>
+    <p>Films:</p>
   </div>
 </template>
 

@@ -13,6 +13,7 @@
     <p>MGLT: {{starship.MGLT}}</p>
     <p>Starship Class: {{starship.starship_class}}</p>
     <p>Pilots:</p>
+    <p>Films:</p>
   </div>
 </template>
 
