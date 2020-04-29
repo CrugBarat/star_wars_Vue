@@ -1,6 +1,6 @@
 # STAR WARS
 
-STAR WARS is a basic search app, which uses an API as a data source.
+STAR WARS is a search app, which uses a HTTP RESTful API as a data source.
 
 **Programming Language**: JavaScript
 
@@ -47,7 +47,7 @@ You have been asked to build an app to display information about Star Wars films
 npm install
 ```
 
-- Compile for development
+- Compile
 
 ```
 npm run serve
